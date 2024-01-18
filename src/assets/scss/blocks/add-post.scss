@@ -67,7 +67,7 @@
 
 .add-post__file {
     background: #ebebeb
-    url("./src/assets/images/add-photo.svg") center no-repeat;
+    url("../images/add-photo.svg") center no-repeat;
 
     input {
         display: none;
@@ -83,7 +83,7 @@
 }
 .add-post__send {
     margin-left: 1.5rem;
-    background: $blue url("./src/assets/images/send.svg") center no-repeat;	
+    background: $blue url("../images/send.svg") center no-repeat;	
 
 	font-size: 0;
 	color: transparent;
