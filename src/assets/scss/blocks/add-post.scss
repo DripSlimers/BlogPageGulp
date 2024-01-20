@@ -36,6 +36,11 @@
     }
 }
 
+.add-post__form {
+	display: flex;
+	width: 100%;
+}
+
 .add-post__form-actions {
     width: 12rem;
     flex-shrink: 0;

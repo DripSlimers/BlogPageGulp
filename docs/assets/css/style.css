@@ -1106,6 +1106,12 @@ a:hover {
     color: #d2d2d2;
 }
 
+.add-post__form {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
 .add-post__form-actions {
     width: 12rem;
     -ms-flex-negative: 0;
@@ -1142,7 +1148,7 @@ a:hover {
 }
 
 .add-post__file {
-    background: #ebebeb url("./assets/images/add-photo.svg") center no-repeat;
+    background: #ebebeb url("../images/add-photo.svg") center no-repeat;
 }
 
 .add-post__file input {
@@ -1161,7 +1167,7 @@ a:hover {
 
 .add-post__send {
     margin-left: 1.5rem;
-    background: #3137c9 url("./assets/images/send.svg") center no-repeat;
+    background: #3137c9 url("../images/send.svg") center no-repeat;
     font-size: 0;
     color: transparent;
 }
