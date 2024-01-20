@@ -464,6 +464,7 @@ a:hover {
 
 .nav__list {
   display: flex;
+  transition: display 2s linear;
 }
 @media screen and (max-width: 991px) {
   .nav__list {
@@ -959,7 +960,7 @@ a:hover {
 .add-post__textarea {
   display: block;
   flex-grow: 1;
-  height: 3.4rem;
+  height: 4.2rem;
   overflow: hidden;
   border: none;
   background: transparent;
@@ -970,6 +971,16 @@ a:hover {
 }
 .add-post__textarea::placeholder {
   color: #d2d2d2;
+}
+
+.add-post__form {
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 575px) {
+  .add-post__form {
+    flex-wrap: wrap;
+  }
 }
 
 .add-post__form-actions {
@@ -1679,4 +1690,10 @@ a:hover {
 .modal__footer .modal__video {
   display: block;
   margin: 0 auto;
+}
+@media screen and (max-width: 575px) {
+  .modal__footer li {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

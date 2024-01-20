@@ -1,1 +1,54 @@
-!function(){const e=document.getElementById("sidebarToggle"),t=(document.getElementById("sidebar"),document.getElementById("page")),o=document.body;function s(){o.classList.remove("show-sidebar"),document.querySelector(".page__mask").remove()}e.addEventListener("click",(e=>{o.classList.contains("show-sidebar")?s():function(){let e=document.createElement("div");e.classList.add("page__mask"),e.addEventListener("click",s),t.appendChild(e),o.classList.add("show-sidebar")}()}))}(),function(){const e=document.querySelectorAll("[data-modal]"),t=document.body,o=document.querySelectorAll(".modal__close"),s=document.querySelectorAll(".modal");function c(e){e.querySelector(".modal__content").removeAttribute("style"),setTimeout((()=>{e.classList.remove("show"),t.classList.remove("no-scroll")}),200)}e.forEach((e=>{e.addEventListener("click",(e=>{let o=e.currentTarget.getAttribute("data-modal"),s=document.getElementById(o),c=s.querySelector(".modal__content");c.addEventListener("click",(e=>{e.stopPropagation()})),s.classList.add("show"),t.classList.add("no-scroll"),setTimeout((()=>{c.style.transform="none",c.style.opacity="1"}),1)}))})),o.forEach((e=>{e.addEventListener("click",(e=>{c(e.target.closest(".modal"))}))})),s.forEach((e=>{e.addEventListener("click",(e=>{c(e.target)}))}))}(),document.querySelectorAll("[data-autoresize]").forEach((e=>{let t=e.offsetHeight;e.addEventListener("input",(e=>{let o=e.target;o.style.height=t+"px",o.style.height=o.scrollHeight+"px"}))}));
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/assets/js/mobile-nav.js":
+/*!*************************************!*\
+  !*** ./src/assets/js/mobile-nav.js ***!
+  \*************************************/
+/***/ (function() {
+
+eval("const burger =  document.getElementById('sidebarToggle');\nconst sidebar = document.getElementById('sidebar');\nconst page = document.getElementById('page');\nconst body = document.body;\n\n// Burger\nburger.addEventListener('click', event => {\n\tif ( body.classList.contains('show-sidebar') ) {\n\t\tcloseSidebar();\n\t} else {\n\t\tshowSidebar();\n\t}\n});\n\nfunction showSidebar() {\n\tlet mask = document.createElement('div');\n\tmask.classList.add('page__mask');\n\tmask.addEventListener('click', closeSidebar);\n\t\n\tpage.appendChild(mask);\n\n\tbody.classList.add('show-sidebar');\n}\n\nfunction closeSidebar() {\n\tbody.classList.remove('show-sidebar');\n\tdocument.querySelector('.page__mask').remove();\n}\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/mobile-nav.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/modal.js":
+/*!********************************!*\
+  !*** ./src/assets/js/modal.js ***!
+  \********************************/
+/***/ (function() {
+
+eval("const modalBtn = document.querySelectorAll('[data-modal]');\r\nconst body = document.body;\r\nconst modalClose = document.querySelectorAll('.modal__close');\r\nconst modal = document.querySelectorAll('.modal');\r\n\r\nmodalBtn.forEach(item => {\r\n\titem.addEventListener('click', event => {\r\n\t\tlet $this = event.currentTarget;\r\n\t\tlet modalId = $this.getAttribute('data-modal');\r\n\t\tlet modal = document.getElementById(modalId);\r\n\t\tlet modalContent = modal.querySelector('.modal__content');\r\n\r\n\t\tmodalContent.addEventListener('click', event => {\r\n\t\t\tevent.stopPropagation();\r\n\t\t});\r\n\r\n\t\t\r\n\t\tmodal.classList.add('show');\r\n\t\tbody.classList.add('no-scroll');\r\n\r\n\t\tsetTimeout(() => {\r\n\t\t\tmodalContent.style.transform = 'none';\r\n\t\t\tmodalContent.style.opacity = '1';\r\n\t\t}, 1);\r\n\t});\r\n});\r\n\r\nmodalClose.forEach(item => {\r\n\titem.addEventListener('click', event => {\r\n\t\tlet currentModal = event.target.closest('.modal');\r\n\r\n\t\tcloseModal(currentModal);\r\n\t});\r\n});\r\n\r\nmodal.forEach(item => {\r\n\titem.addEventListener('click', event => {\r\n\t\tlet currentModal = event.target;\r\n\r\n\t\tcloseModal(currentModal);\r\n\t});\r\n});\r\n\r\nfunction closeModal(currentModal) {\r\n\tlet modalContent = currentModal.querySelector('.modal__content');\r\n\tmodalContent.removeAttribute('style');\r\n\r\n\tsetTimeout(() => {\r\n\t\tcurrentModal.classList.remove('show');\r\n\t\tbody.classList.remove('no-scroll');\r\n\t\t\r\n\t}, 200);\r\n}\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/modal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/textarea.js":
+/*!***********************************!*\
+  !*** ./src/assets/js/textarea.js ***!
+  \***********************************/
+/***/ (function() {
+
+eval("const textArea = document.querySelectorAll('[data-autoresize]');\n\ntextArea.forEach(item => {\n\tlet textAreaH = item.offsetHeight;\n\n\titem.addEventListener('input', event => {\n\t\tlet $this = event.target;\n\n\t\t$this.style.height = textAreaH + 'px';\n\t\t$this.style.height = $this.scrollHeight + 'px';\n\n\t});\n});\n\n//# sourceURL=webpack://brainscloud/./src/assets/js/textarea.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	__webpack_modules__["./src/assets/js/mobile-nav.js"]();
+/******/ 	__webpack_modules__["./src/assets/js/modal.js"]();
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/assets/js/textarea.js"]();
+/******/ 	
+/******/ })()
+;

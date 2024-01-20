@@ -18,11 +18,11 @@
 .nav__list {
     display: flex;
 
+	transition: display 2s linear;
+
     @include breakpoint($tablet-bp) {
-        // display: none;
         flex-direction: column;
     }
-
 }
 
 .nav__item {
@@ -34,7 +34,6 @@
         }
 
         > .subnav {
-
             display: block;
         }
     }

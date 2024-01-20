@@ -3,6 +3,7 @@ const sidebar = document.getElementById('sidebar');
 const page = document.getElementById('page');
 const body = document.body;
 
+// Burger
 burger.addEventListener('click', event => {
 	if ( body.classList.contains('show-sidebar') ) {
 		closeSidebar();
@@ -11,7 +12,7 @@ burger.addEventListener('click', event => {
 	}
 });
 
-function showSidebar(){
+function showSidebar() {
 	let mask = document.createElement('div');
 	mask.classList.add('page__mask');
 	mask.addEventListener('click', closeSidebar);
