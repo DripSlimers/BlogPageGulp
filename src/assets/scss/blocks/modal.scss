@@ -92,4 +92,11 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+	@include breakpoint($mobile-bp) {
+		li {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
 }

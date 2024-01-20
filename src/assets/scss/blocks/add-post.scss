@@ -19,7 +19,7 @@
 .add-post__textarea {
     display: block;
     flex-grow: 1;
-    height: 3.4rem;
+    height: 4.2rem;
 
     overflow: hidden;
 
@@ -37,8 +37,13 @@
 }
 
 .add-post__form {
-	display: flex;
-	width: 100%;
+    display: flex;
+    width: 100%;
+
+
+    @include breakpoint($mobile-bp) {
+        flex-wrap: wrap;
+    }
 }
 
 .add-post__form-actions {
