@@ -495,6 +495,7 @@ a:hover {
 .nav__list {
     display: -ms-flexbox;
     display: flex;
+    transition: display 2s linear;
 }
 
 @media screen and (max-width: 991px) {
@@ -1954,4 +1955,13 @@ a:hover {
 .modal__footer .modal__video {
     display: block;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 575px) {
+    .modal__footer li {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 }
